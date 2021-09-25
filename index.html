@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casamento Guga e Déborah</title>
+  </head>
+  <body>
+    <span>Com quanto gostaria de nos presentear?</span>
+    <input
+      type="number"
+      placeholder="R$100"
+      value="100"
+      min="1"
+      id="donation_value"
+    />
+
+    <button onclick="handleGeneratePreference()">Confirmar</button>
+
+    <div id="willReceive"></div>
+
+    <div class="pix-div"></div>
+
+    <div class="bank-account">
+      <h4>Para TED:</h4>
+      <div>
+        <h5>Banco</h5>
+        <span>323 Mercado Pago</span>
+      </div>
+      <div>
+        <h5>Agência</h5>
+        <span>0001</span>
+      </div>
+      <div>
+        <h5>Conta</h5>
+        <span>7892562315-6</span>
+      </div>
+      <div>
+        <h5>Beneficiário</h5>
+        <span>Gustavo Luiz Bispo Dos Santos</span>
+      </div>
+      <div>
+        <h5>CPF</h5>
+        <span>102.316.314-48</span>
+      </div>
+    </div>
+
+    <div class="cho-container"></div>
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
