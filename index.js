@@ -9,8 +9,8 @@ const copyText = (stringToCopy) => {
 const handleGeneratePreference = async () => {
   const price = document.getElementById("donation_value").value;
 
-  const response = await fetch("http://localhost:3000/api", {
-    // const response = await fetch("https://back-casorio.vercel.app/api", {
+  // const response = await fetch("http://localhost:3000/api", {
+  const response = await fetch("https://back-casorio.vercel.app/api", {
     method: "POST",
     headers: {
       Accept: "application/json",
