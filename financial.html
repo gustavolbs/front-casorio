@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presentear com Dinheiro | Guga e Déborah</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/financial.css" />
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="./index.html">
+        <img src="./assets/arrow-left.svg" alt="Home" />
+        <span>Voltar</span>
+      </a>
+      <a href="./index.html">
+        <img src="./assets/logo.svg" alt="Guga e Déborah" />
+      </a>
+    </nav>
+
+    <main>
+      <div class="column">
+        <div class="methods">
+          <h1>De que forma gostaria de nos presentear?</h1>
+          <span>
+            Aceitamos Pix, TED, Crédito, 2 cartões, PayPal, Débito Virtual
+            Caixa, Saldo MercadoPago, Lotérica e Boleto.
+          </span>
+          <span>
+            Você pode alterar a forma de pagamento a qualquer momento.
+          </span>
+
+          <div>
+            <button
+              type="button"
+              onclick="toggleActive('pix-method')"
+              id="pix-method"
+            >
+              PIX
+            </button>
+            <button
+              type="button"
+              onclick="toggleActive('ted-method')"
+              id="ted-method"
+            >
+              TED
+            </button>
+            <button
+              type="button"
+              onclick="toggleActive('other-method')"
+              id="other-method"
+            >
+              Outros Meios
+            </button>
+          </div>
+        </div>
+
+        <div class="money-section">
+          <h1>Com quanto gostaria de nos presentear?</h1>
+
+          <div class="money-div">
+            <span>R$</span>
+            <input
+              type="number"
+              value="10.00"
+              min="1,00"
+              step="0.01"
+              id="gift-value"
+              onkeyup="willReceive()"
+            />
+          </div>
+
+          <span class="disclaimer"></span>
+
+          <div class="add-money">
+            <span onclick="addValue(100)"><i>+</i> R$100</span>
+            <span onclick="addValue(250)"><i>+</i> R$250</span>
+            <span onclick="addValue(500)"><i>+</i> R$500</span>
+          </div>
+
+          <button type="button" onclick="handleGeneratePreference()">
+            Confirmar
+          </button>
+        </div>
+      </div>
+
+      <div class="column"></div>
+
+      <div class="column"></div>
+    </main>
+
+    <footer>
+      <span>Feito com <i>❤️</i> para todos os nossos amigos e convidados</span>
+    </footer>
+
+    <!-- 
+
+
+    <div id="willReceive"></div>
+
+    <div class="pix-div"></div>
+
+    <div class="bank-account">
+      <h4>Para TED:</h4>
+      <div>
+        <h5>Banco</h5>
+        <span>323 Mercado Pago</span>
+      </div>
+      <div>
+        <h5>Agência</h5>
+        <span>0001</span>
+      </div>
+      <div>
+        <h5>Conta</h5>
+        <span>7892562315-6</span>
+      </div>
+      <div>
+        <h5>Beneficiário</h5>
+        <span>Gustavo Luiz Bispo Dos Santos</span>
+      </div>
+      <div>
+        <h5>CPF</h5>
+        <span>102.316.314-48</span>
+      </div>
+    </div>
+
+    <div class="cho-container"></div> -->
+
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/financial.js"></script>
+  </body>
+</html>

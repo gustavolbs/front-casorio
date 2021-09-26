@@ -1,0 +1,176 @@
+.column {
+  float: left;
+  width: 343px;
+  /* max-width: calc(100% / 3); */
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  width: 343px;
+
+  display: flex;
+  align-items: center;
+}
+
+.methods {
+  display: flex;
+  flex-direction: column;
+}
+
+.methods span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  color: rgba(17, 17, 17, 0.48);
+}
+
+.methods span + span {
+  margin-top: 8px;
+}
+
+.methods div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.methods div button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+
+  background: #e3daf9;
+  border-radius: 100px;
+  border: none;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.methods div button.active {
+  background: #6e41e2;
+}
+
+.money-section {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+.money-section button {
+  margin-top: 36px;
+  background: #6e41e2;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 20px;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.money-div {
+  margin: 36px 0;
+  display: flex;
+  border-bottom: 4px solid #6e41e2;
+  /* padding-bottom: 4px; */
+  align-items: flex-end;
+  color: #000;
+}
+
+.money-div span {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.money-div input {
+  width: 100%;
+  height: 64px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  border: none;
+  outline: 0;
+}
+
+input::placeholder {
+  color: #000;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.disclaimer {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(17, 17, 17, 0.48);
+  margin-bottom: 36px;
+}
+
+.disclaimer b {
+  color: #111;
+  font-weight: bold;
+}
+
+.add-money {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-money span {
+  background: #f2f2f2;
+  padding: 10px 20px;
+  border-radius: 100px;
+  cursor: pointer;
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.add-money span i {
+  font-size: 28px;
+  margin-right: 12px;
+  font-weight: 400;
+}
