@@ -42,10 +42,24 @@ function willReceive() {
 }
 willReceive();
 
+function toggleDisableWhenLoading() {
+  const methods = document.getElementById("methods");
+  methods.classList.toggle("disabled");
+  const moneyDiv = document.getElementById("money-div");
+  moneyDiv.classList.toggle("disabled");
+  const addMoney = document.getElementById("add-money");
+  addMoney.classList.toggle("disabled");
+  const confirmValue = document.getElementById("confirm-value");
+  confirmValue.classList.toggle("disabled");
+}
+
 const handleGeneratePreference = async () => {
   const price = document.getElementById("gift-value").value;
+  const button = document.getElementById("confirm-value");
+  button.innerHTML = `<img src="../assets/loader.svg" alt="loader" class="loader" />`;
 
-  // const response = await fetch("http://localhost:3000/api", {
+  toggleDisableWhenLoading();
+
   // const response = await fetch("https://back-casorio.vercel.app/api", {
   //   method: "POST",
   //   headers: {
@@ -57,6 +71,11 @@ const handleGeneratePreference = async () => {
   //   }),
   // });
   // const data = await response.json();
+
+  setTimeout(() => {
+    button.innerHTML = `Confirmar`;
+    toggleDisableWhenLoading();
+  }, 3000);
 
   // document.getElementsByClassName("pix-div")[0].innerHTML = `
   //   <img id="pix-qr" src="data:image/jpeg;base64,${

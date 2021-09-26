@@ -63,6 +63,11 @@ h1 {
   line-height: 24px;
   color: #ffffff;
   cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+
+.methods div button:hover {
+  background: #5835b0;
 }
 
 .methods div button.active {
@@ -91,6 +96,11 @@ h1 {
   line-height: 24px;
   text-align: center;
   color: #ffffff;
+  transition: all ease-in-out 200ms;
+}
+
+.money-section button:hover {
+  background: #5835b0;
 }
 
 .money-div {
@@ -167,6 +177,11 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: center;
   text-align: center;
   color: #000000;
+  transition: all ease-in-out 200ms;
+}
+
+.add-money span:hover {
+  background: #e0e0e0;
 }
 
 .add-money span i {

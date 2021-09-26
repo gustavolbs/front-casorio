@@ -32,7 +32,7 @@
             Você pode alterar a forma de pagamento a qualquer momento.
           </span>
 
-          <div>
+          <div id="methods">
             <button
               type="button"
               onclick="toggleActive('pix-method')"
@@ -60,7 +60,7 @@
         <div class="money-section">
           <h1>Com quanto gostaria de nos presentear?</h1>
 
-          <div class="money-div">
+          <div class="money-div" id="money-div">
             <span>R$</span>
             <input
               type="number"
@@ -74,13 +74,17 @@
 
           <span class="disclaimer"></span>
 
-          <div class="add-money">
+          <div class="add-money" id="add-money">
             <span onclick="addValue(100)"><i>+</i> R$100</span>
             <span onclick="addValue(250)"><i>+</i> R$250</span>
             <span onclick="addValue(500)"><i>+</i> R$500</span>
           </div>
 
-          <button type="button" onclick="handleGeneratePreference()">
+          <button
+            type="button"
+            id="confirm-value"
+            onclick="handleGeneratePreference()"
+          >
             Confirmar
           </button>
         </div>
@@ -97,8 +101,6 @@
 
     <!-- 
 
-
-    <div id="willReceive"></div>
 
     <div class="pix-div"></div>
 

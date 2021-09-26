@@ -23,16 +23,17 @@
   color: rgba(17, 17, 17, 0.48);
   display: flex;
   align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 20px;
+}
+
+.navigation ul li a {
+  padding: 10px 20px;
 }
 
 .navigation a img + span {
   margin-left: 4px;
-}
-
-.navigation a {
-  font-size: 16px;
-  line-height: 24px;
-  padding: 10px 20px;
 }
 
 .navigation ul li + li {
@@ -76,4 +77,41 @@ footer span i {
 
 .hide {
   display: none;
+}
+
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: default;
+  transition: all ease-in-out 200ms;
+}
+
+.loader {
+  animation-name: loader;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 24px 16px;
+  }
+
+  .navigation {
+    padding: 16px 16px;
+  }
+
+  .navigation a {
+    padding: 10px 0;
+  }
 }
