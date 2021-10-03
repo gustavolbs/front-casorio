@@ -213,7 +213,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .ted,
 .others-methods,
-.pix {
+.pix,
+.pix-key {
   display: none;
   flex-direction: column;
 }
@@ -443,4 +444,38 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .pix-img-div-loader img {
   max-width: 50%;
+}
+
+.pix-key {
+  margin-bottom: 128px;
+}
+
+.pix-key h5 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  animation-delay: 2000ms;
+}
+
+.pix-key button {
+  max-width: unset;
+  width: fit-content;
+}
+
+.thanks {
+  display: none;
+  flex-direction: column;
+  transition: all ease-in-out 200ms;
+}
+
+.thanks img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.thanks-img-div {
+  transition: all ease-in-out 200ms;
 }

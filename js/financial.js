@@ -40,6 +40,7 @@ function toggleActive(itemId) {
 
   if (generatedPreference) {
     showPaymentMethodInfo();
+    showThanks();
   }
 }
 
@@ -57,6 +58,21 @@ function showPaymentMethodInfo() {
       }
     }
   });
+}
+
+function showThanks() {
+  const thanksDiv = document.getElementsByClassName("thanks")[0];
+  const pixKey = document.getElementsByClassName("pix-key")[0];
+
+  if (generatedPreference) {
+    thanksDiv.style.display = "flex";
+
+    if (selectedMethod === "pix-method") {
+      pixKey.style.display = "flex";
+    } else {
+      pixKey.style.display = "none";
+    }
+  }
 }
 
 function addValue(valueToAdd) {
@@ -157,6 +173,7 @@ const handleGeneratePreference = async () => {
     button.innerHTML = `Confirmar`;
     toggleDisableWhenLoading();
     generatedPreference = true;
+    showThanks();
     showPaymentMethodInfo();
 
     const pixImg = document.getElementById("pix-img");

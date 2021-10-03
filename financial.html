@@ -104,7 +104,6 @@
             <div class="pix-img-div">
               <img id="pix-img" src={data:image/jpeg;base64,${qr_code_base64}
               alt="Pix" />
-              <!-- <img id="pix-img" src="https://picsum.photos/200" alt="Pix" /> -->
               <div class="pix-img-div-loader">
                 <img src="./assets/loader.svg" alt="loader" class="loader" />
               </div>
@@ -171,7 +170,26 @@
         </div>
       </div>
 
-      <div class="column"></div>
+      <div class="column">
+        <div class="thanks">
+          <div class="pix-key fade">
+            <h2>Para valores avulsos, utilize a chave pix abaixo</h2>
+
+            <h5>e84b74ce-29e8-408f-96f4-4efe18bc1927</h5>
+            <button
+              class="pix-button"
+              onclick="copyText('e84b74ce-29e8-408f-96f4-4efe18bc1927')"
+            >
+              Copiar chave Pix
+            </button>
+          </div>
+
+          <div class="thanks-img-div fade">
+            <h2>Obrigado! 😁❤️</h2>
+            <img src="./assets/thanks.svg" alt="Obrigado!" />
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
