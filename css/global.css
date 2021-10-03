@@ -50,7 +50,7 @@
 main {
   display: flex;
   padding: 36px 48px;
-  /* height: calc(100vh - 82px - 76px - 36px * 2); */
+  min-height: calc(100vh - 82px - 76px - 36px * 2);
   /* height: 100vh - nav - footer - main padding */
 }
 
@@ -93,12 +93,35 @@ footer span i {
   animation-timing-function: linear;
 }
 
+.fade {
+  animation-name: fade;
+  animation-duration: 1000ms;
+  animation-timing-function: ease;
+}
+
+.toastify {
+  font-family: Montserrat;
+  font-size: 14px;
+  padding: 12px;
+}
+
 @keyframes loader {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

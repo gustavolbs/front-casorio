@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/financial.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
   </head>
   <body>
     <nav class="navigation">
@@ -90,7 +96,80 @@
         </div>
       </div>
 
-      <div class="column"></div>
+      <div class="column">
+        <div class="pix fade" id="pix-info">
+          <h2>Finalize seu presente através das informações abaixo</h2>
+
+          <div>
+            <div class="pix-img-div">
+              <img id="pix-img" src={data:image/jpeg;base64,${qr_code_base64}
+              alt="Pix" />
+              <!-- <img id="pix-img" src="https://picsum.photos/200" alt="Pix" /> -->
+              <div class="pix-img-div-loader">
+                <img src="./assets/loader.svg" alt="loader" class="loader" />
+              </div>
+            </div>
+
+            <h4>Utilize o QR Code acima ou copie o código com o botão</h4>
+            <button class="pix-button" id="copy-pix-hash">
+              Pix Copia e Cola
+            </button>
+          </div>
+        </div>
+
+        <div class="ted fade" id="ted-info">
+          <h2>Finalize seu presente através das informações abaixo</h2>
+
+          <div class="tedCard">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <span class="tedLabel">TED</span>
+            <div>
+              <h4>Banco</h4>
+              <span>323 Mercado Pago</span>
+            </div>
+            <div>
+              <h4>Agência e Conta</h4>
+              <span>ag: 0001 cc: 7892562315-6</span>
+            </div>
+            <div>
+              <h4>Beneficiário</h4>
+              <span>Gustavo Luiz Bispo Dos Santos</span>
+            </div>
+            <div>
+              <h4>CPF</h4>
+              <span>102.316.314-48</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="others-methods fade" id="other-info">
+          <h2>Finalize seu presente através das informações abaixo</h2>
+
+          <div>
+            <span>Simulação de seu valor no crédito</span>
+            <div class="tax-table">
+              <div class="table-column">
+                <div class="table-cel">1x</div>
+                <div class="table-cel">2x</div>
+                <div class="table-cel">3x</div>
+                <div class="table-cel">4x</div>
+                <div class="table-cel">5x</div>
+                <div class="table-cel">6x</div>
+              </div>
+              <div class="table-column">
+                <div class="table-cel">7x</div>
+                <div class="table-cel">8x</div>
+                <div class="table-cel">9x</div>
+                <div class="table-cel">10x</div>
+                <div class="table-cel">11x</div>
+                <div class="table-cel">12x</div>
+              </div>
+            </div>
+            <div id="mercado-pago" class="gift-button"></div>
+          </div>
+        </div>
+      </div>
 
       <div class="column"></div>
     </main>
@@ -99,39 +178,11 @@
       <span>Feito com <i>❤️</i> para todos os nossos amigos e convidados</span>
     </footer>
 
-    <!-- 
-
-
-    <div class="pix-div"></div>
-
-    <div class="bank-account">
-      <h4>Para TED:</h4>
-      <div>
-        <h5>Banco</h5>
-        <span>323 Mercado Pago</span>
-      </div>
-      <div>
-        <h5>Agência</h5>
-        <span>0001</span>
-      </div>
-      <div>
-        <h5>Conta</h5>
-        <span>7892562315-6</span>
-      </div>
-      <div>
-        <h5>Beneficiário</h5>
-        <span>Gustavo Luiz Bispo Dos Santos</span>
-      </div>
-      <div>
-        <h5>CPF</h5>
-        <span>102.316.314-48</span>
-      </div>
-    </div>
-
-    <div class="cho-container"></div> -->
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <script src="./js/utils.js"></script>
     <script src="./js/financial.js"></script>
   </body>
 </html>
