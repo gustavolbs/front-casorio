@@ -19,6 +19,16 @@ main {
   gap: 36px;
 }
 
+@media screen and (max-width: 1200px) {
+  main {
+    padding: 36px 23px;
+  }
+
+  .navigation {
+    padding: 16px 23px;
+  }
+}
+
 h1 {
   font-family: Montserrat, sans-serif;
   font-style: normal;
@@ -375,13 +385,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .table-column:last-child .table-cel:nth-child(even) {
   background: rgba(110, 65, 226, 0.04);
-}
-
-.pix {
-  /* display: flex; */
-}
-
-.pix div {
 }
 
 .pix div img {
