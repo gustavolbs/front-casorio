@@ -47,6 +47,21 @@
   border-radius: 4px;
 }
 
+.nav-logo-text {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: bold !important;
+  color: #000 !important;
+}
+
+.nav-logo-text span {
+  font-size: 20px;
+}
+
+.nav-logo-text sup {
+  margin-top: -8px;
+  font-size: 22px;
+}
+
 main {
   display: flex;
   padding: 36px 48px;
