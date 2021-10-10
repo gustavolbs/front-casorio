@@ -83,6 +83,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 10px 20px;
 
   background: #e3daf9;
@@ -103,6 +104,20 @@ h2 {
 
 .methods div button.active {
   background: #6e41e2;
+}
+
+@media screen and (max-width: 320px) {
+  .methods div button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .methods div button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
 }
 
 .money-section {
@@ -219,6 +234,29 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 28px;
   margin-right: 12px;
   font-weight: 400;
+}
+
+@media screen and (max-width: 400px) {
+  .add-money span {
+    padding: 8px 16px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .add-money span i {
+    font-size: 20px;
+    margin-right: 4px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .add-money span {
+    padding: 8px 10px;
+  }
+
+  .add-money span i {
+    font-size: 16px;
+  }
 }
 
 .ted,
