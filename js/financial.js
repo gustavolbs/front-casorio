@@ -195,9 +195,56 @@ const handleGeneratePreference = async () => {
   } catch (err) {
     console.error(err);
   }
+};
 
-  // document.getElementsByClassName("pix-div")[0].innerHTML = `
-  //   <h5>Para valores avulsos:</h5>
-  //   <span id="pix-key" onclick="copyText('e84b74ce-29e8-408f-96f4-4efe18bc1927')">Copiar chave pix <b>e84b74ce-29e8-408f-96f4-4efe18bc1927</b></span>
-  // `;
+const handleGenerateGift = async (id, price, product) => {
+  // const price = document.getElementById("gift-value").value;
+  document.getElementsByClassName("gift-button")[0].innerHTML = "";
+  // const button = document.getElementById("confirm-value");
+  // button.innerHTML = `<img src="../assets/white-loader.svg" alt="loader" class="loader" />`;
+
+  // toggleDisableWhenLoading();
+  // togglePixLoader(true);
+
+  try {
+    const response = await fetch("https://back-casorio.vercel.app/api", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        price,
+        product,
+      }),
+    });
+    const data = await response.json();
+
+    // mountInstallmentsTable(data);
+
+    // button.innerHTML = `Confirmar`;
+    toggleDisableWhenLoading();
+    generatedPreference = true;
+    // showThanks();
+    // showPaymentMethodInfo();
+
+    const pixImg = document.getElementById("pix-img");
+    const copyPixHash = document.getElementById("copy-pix-hash");
+
+    pixImg.src = `data:image/jpeg;base64,${data.pix.qr_code_base64}`;
+    copyPixHash.onclick = () => copyText(data.pix.qr_code_base64.trim());
+    togglePixLoader(false);
+
+    mp.checkout({
+      preference: {
+        id: data.id,
+      },
+      render: {
+        container: `.gift-button`,
+        label: "PRESENTEAR",
+      },
+    });
+  } catch (err) {
+    console.error(err);
+  }
 };

@@ -3,9 +3,15 @@
   width: 343px;
   /* max-width: calc(100% / 3); */
 }
+.column-2-3 {
+  float: left;
+  width: 66%;
+  /* max-width: calc(100% / 3); */
+}
 
 @media screen and (max-width: 600px) {
-  .column {
+  .column,
+  .column-2-3 {
     width: 100%;
   }
 }
