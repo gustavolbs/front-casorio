@@ -31,7 +31,7 @@
 
     <main>
       <div class="column">
-        <div class="methods">
+        <div class="methods" id="actions-container">
           <h1>No momento temos os seguintes presentes disponíveis</h1>
           <span>
             Você pode pagar com Pix, TED, Crédito, 2 cartões, PayPal, Débito
@@ -40,11 +40,15 @@
           <span>
             Você pode alterar a forma de pagamento a qualquer momento.
           </span>
+          <span>
+            Selecione o presente que deseja comprar e logo em seguida, no topo
+            da página, aparecerá o botão PAGAR AGORA
+          </span>
+          <div id="mercado-pago" class="gift-button"></div>
         </div>
       </div>
 
       <div class="column-2-3">
-        <div id="mercado-pago" class="gift-button"></div>
         <div class="show-gifts"></div>
       </div>
 
@@ -79,7 +83,6 @@
       src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
     <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <script src="./js/financial.js"></script>
     <script src="./js/gifts.js"></script>
   </body>
 </html>
