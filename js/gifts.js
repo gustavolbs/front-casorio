@@ -157,7 +157,7 @@ const loadGifts = (function renderGifts() {
       `<div
       class="gift ${!gift.stock ? "gift-sold" : ""}"
       id="gift-${gift.id}"
-      onclick="handleGenerateGift(${gift.id},${gift.price},'${gift.product}')"
+      onclick="handleGenerateGift(${gift.price},'${gift.product}')"
     >
       <img src="${gift.img}" alt="${gift.product}" />
       <span>${gift.product} | R$${gift.price.toFixed(2)}</span>

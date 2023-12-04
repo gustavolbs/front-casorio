@@ -41,10 +41,16 @@
 }
 
 .navigation ul li:last-child a {
-  color: #6e41e2;
-  border: 2px solid #6e41e2;
+  color: #66b7dd;
+  border: 2px solid #66b7dd;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: all ease-in-out 150ms;
+}
+
+.navigation ul li:last-child:hover a {
+  color: white;
+  background: #66b7dd;
 }
 
 .nav-logo-text {

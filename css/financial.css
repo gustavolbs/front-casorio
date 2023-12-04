@@ -92,7 +92,7 @@ h2 {
   justify-content: center;
   padding: 10px 20px;
 
-  background: #e3daf9;
+  background: #d3ecf8;
   border-radius: 100px;
   border: none;
 
@@ -105,11 +105,11 @@ h2 {
 }
 
 .methods div button:hover {
-  background: #5835b0;
+  background: #66b7dd;
 }
 
 .methods div button.active {
-  background: #6e41e2;
+  background: #88cbeb;
 }
 
 @media screen and (max-width: 320px) {
@@ -134,7 +134,7 @@ h2 {
 
 .money-section button {
   margin-top: 36px;
-  background: #6e41e2;
+  background: #88cbeb;
   border-radius: 4px;
   border: none;
   cursor: pointer;
@@ -152,13 +152,13 @@ h2 {
 }
 
 .money-section button:hover {
-  background: #5835b0;
+  background: #66b7dd;
 }
 
 .money-div {
   margin: 36px 0;
   display: flex;
-  border-bottom: 4px solid #6e41e2;
+  border-bottom: 4px solid #66b7dd;
   /* padding-bottom: 4px; */
   align-items: flex-end;
   color: #000;
@@ -274,7 +274,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .tedCard {
-  background: #6e41e2;
+  background: #88cbeb;
   border-radius: 8px;
   max-width: 100%;
   padding: 20px 18px;
@@ -309,7 +309,7 @@ input[type="number"]::-webkit-outer-spin-button {
   align-items: flex-end;
   text-align: center;
   width: fit-content;
-  color: #6e41e2;
+  color: #88cbeb;
   background: #ffffff;
   border-radius: 100px;
   padding: 2px 8px;
@@ -356,7 +356,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .others-methods > div .mercadopago-button {
-  border: 2px solid #6e41e2;
+  border: 2px solid #88cbeb;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 10px 20px;
@@ -371,15 +371,16 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  color: #6e41e2;
+  color: #88cbeb;
   cursor: pointer;
 
-  transition: all ease-in-out 200ms;
+  transition: all ease-in-out 150ms;
 }
 
 .others-methods > div .mercadopago-button:hover,
 .pix-button:hover {
-  background: rgba(110, 65, 226, 0.04);
+  background: #88cbeb;
+  color: white;
 }
 
 .tax-table {
@@ -409,26 +410,26 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   align-items: center;
   text-align: center;
-  color: #6e41e2;
+  color: #88cbeb;
 }
 
 .table-cel span {
 }
 
 .table-column .table-cel:nth-child(odd) {
-  background: rgba(110, 65, 226, 0.04);
+  background: hsla(197, 78%, 61%, 0.08);
 }
 
 .table-column .table-cel:nth-child(even) {
-  background: rgba(110, 65, 226, 0.16);
+  background: rgba(65, 159, 226, 0.16);
 }
 
 .table-column:last-child .table-cel:nth-child(odd) {
-  background: rgba(110, 65, 226, 0.16);
+  background: rgba(65, 159, 226, 0.16);
 }
 
 .table-column:last-child .table-cel:nth-child(even) {
-  background: rgba(110, 65, 226, 0.04);
+  background: rgba(77, 189, 233, 0.08);
 }
 
 .pix div img {
@@ -449,7 +450,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .pix-button {
   padding: 10px 20px;
-  border: 1px solid #6e41e2;
+  border: 1px solid #66b7dd;
   box-sizing: border-box;
   border-radius: 4px;
   font-family: Roboto;
@@ -457,7 +458,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  color: #6e41e2;
+  color: #66b7dd;
   background: none;
   transition: all ease-in-out 200ms;
   cursor: pointer;
