@@ -1,0 +1,110 @@
+main {
+  padding: 2.25rem 0 0;
+}
+
+main.index-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Playball", sans-serif;
+  font-size: 4rem;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+img.main-img {
+  margin: 2rem 0;
+  max-width: 62.5rem;
+  width: 70vw;
+}
+
+main.index-content section {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+main.index-content section div {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main.index-content section span {
+  font-family: Notera;
+  font-size: 2rem;
+  line-height: 0.8;
+  color: #7c7c7c;
+}
+
+main.index-content section span::after {
+  background: url("../assets/divider.png") no-repeat left top;
+  content: "";
+  display: block;
+  height: 11px;
+  margin: 0.75rem auto 0;
+  width: 137px;
+}
+
+p {
+  max-width: 600px;
+  text-align: start;
+  margin: 1rem auto 0 auto;
+  font-family: Roboto, sans-serif;
+  color: #9c9c9c;
+  line-height: 1.6em;
+  overflow-wrap: break-word;
+}
+
+div.cerimony-img {
+  background-image: url("../assets/main/cerimony.JPG");
+  background-repeat: no-repeat;
+  background-position-x: 40%;
+  background-position-y: -200px;
+  width: 100vw;
+  height: 40vh;
+}
+
+img.local-img {
+  margin: 2rem 0;
+  max-width: 40rem;
+}
+
+img.gifts-img {
+  margin: 2rem 0;
+  max-width: 20rem;
+}
+
+@media screen and (max-width: 720px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  img.main-img {
+    margin: 1rem 0;
+    width: 90%;
+  }
+
+  img.local-img {
+    width: 90%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+}
