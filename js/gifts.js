@@ -29,7 +29,7 @@ const ALL_GIFTS = [
     price: 100.0,
     img: "../assets/gifts/bolt.jpeg",
     id: 4,
-    stock: true,
+    stock: false,
   },
   {
     product: "Um mês de academia para os noivos",
@@ -106,7 +106,7 @@ const ALL_GIFTS = [
     price: 75.0,
     img: "../assets/gifts/jogo-de-cama.jpeg",
     id: 15,
-    stock: true,
+    stock: false,
   },
 ];
 
