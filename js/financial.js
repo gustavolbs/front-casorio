@@ -62,16 +62,9 @@ function showPaymentMethodInfo() {
 
 function showThanks() {
   const thanksDiv = document.getElementsByClassName("thanks")[0];
-  const pixKey = document.getElementsByClassName("pix-key")[0];
 
   if (generatedPreference) {
     thanksDiv.style.display = "flex";
-
-    if (selectedMethod === "pix-method") {
-      pixKey.style.display = "flex";
-    } else {
-      pixKey.style.display = "none";
-    }
   }
 }
 
@@ -93,7 +86,7 @@ function willReceive() {
   element.innerHTML = `
     Os noivos receberão <b>R$${Number(price).toFixed(
       2
-    )}</b> através do pix ou ted ou <b>R$${Number(discounted).toFixed(
+    )}</b> através do pix/ted ou <b>R$${Number(discounted).toFixed(
     2
   )}</b> através dos outros meios
   `;
@@ -135,17 +128,6 @@ function mountInstallmentsTable(data) {
   taxTable.innerHTML = toRender;
 }
 
-function togglePixLoader(show) {
-  const pixImgDivLoader =
-    document.getElementsByClassName("pix-img-div-loader")[0];
-  pixImgDivLoader.style.display = show ? "flex" : "none";
-
-  const copyPixHash = document.getElementById("copy-pix-hash");
-  copyPixHash.innerHTML = show
-    ? `<img src="../assets/loader.svg" alt="loader" class="loader" />`
-    : "Pix Copia e Cola";
-}
-
 const handleGeneratePreference = async () => {
   const price = document.getElementById("gift-value").value;
   document.getElementsByClassName("gift-button")[0].innerHTML = "";
@@ -153,7 +135,6 @@ const handleGeneratePreference = async () => {
   button.innerHTML = `<img src="../assets/white-loader.svg" alt="loader" class="loader" />`;
 
   toggleDisableWhenLoading();
-  togglePixLoader(true);
 
   try {
     const response = await fetch("https://back-casorio.vercel.app/api", {
@@ -175,13 +156,6 @@ const handleGeneratePreference = async () => {
     generatedPreference = true;
     showThanks();
     showPaymentMethodInfo();
-
-    const pixImg = document.getElementById("pix-img");
-    const copyPixHash = document.getElementById("copy-pix-hash");
-
-    pixImg.src = `data:image/jpeg;base64,${data.pix.qr_code_base64}`;
-    copyPixHash.onclick = () => copyText(data.pix.qr_code_base64.trim());
-    togglePixLoader(false);
 
     mp.checkout({
       preference: {

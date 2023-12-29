@@ -5,10 +5,10 @@ const mp = new MercadoPago("APP_USR-07e0f4f2-0701-4c04-8f86-18153498f343", {
 const ALL_GIFTS = [
   {
     product: "Saco de ração de Bolt",
-    price: 150.0,
+    price: 50.0,
     img: "../assets/gifts/liva.jpg",
     id: 1,
-    stock: false,
+    stock: true,
   },
   {
     product: "Parcela do fogão",
@@ -103,12 +103,35 @@ const ALL_GIFTS = [
   },
   {
     product: "Jogo de cama",
-    price: 75.0,
+    price: 100.0,
     img: "../assets/gifts/jogo-de-cama.jpeg",
     id: 15,
-    stock: false,
+    stock: true,
+  },
+  {
+    product: "Levar as sogras na lua de mel",
+    price: 1000.0,
+    img: "../assets/gifts/sogras.JPG",
+    id: 16,
+    stock: true,
+  },
+  {
+    product: "Passeio à cavalo",
+    price: 90.0,
+    img: "../assets/gifts/cavalo.jpg",
+    id: 17,
+    stock: true,
+  },
+  {
+    product: "Escolinha pra Bolt não ir pra o mundo do crime",
+    price: 150.0,
+    img: "../assets/gifts/escola.jpg",
+    id: 18,
+    stock: true,
   },
 ];
+
+ALL_GIFTS.sort((a, b) => a.price - b.price);
 
 const handleGenerateGift = async (price, product) => {
   document.getElementsByClassName("gift-button")[0].innerHTML = "";
@@ -126,7 +149,7 @@ const handleGenerateGift = async (price, product) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        price,
+        price: price + price * 0.053,
         product,
       }),
     });
@@ -153,16 +176,31 @@ const loadGifts = (function renderGifts() {
   const showGifts = document.getElementsByClassName("show-gifts")[0];
 
   const giftsHTML = ALL_GIFTS.map(
-    (gift) =>
+    ({ stock, price, product, id, img }) =>
       `<div
-      class="gift ${!gift.stock ? "gift-sold" : ""}"
-      id="gift-${gift.id}"
-      onclick="handleGenerateGift(${gift.price},'${gift.product}')"
+      class="gift ${!stock ? "gift-sold" : ""}"
+      id="gift-${id}"
+      onclick="handleGenerateGift(${price},'${product}')"
     >
-      <img src="${gift.img}" alt="${gift.product}" />
-      <span>${gift.product} | R$${gift.price.toFixed(2)}</span>
+      <img src="${img}" alt="${product}" />
+      <span>${product} | R$${(price + price * 0.053).toFixed(2)}</span>
     </div>`
   ).join("");
 
   showGifts.innerHTML = giftsHTML;
 })();
+
+const copyText = (stringToCopy) => {
+  navigator.clipboard.writeText(stringToCopy);
+
+  Toastify({
+    text: "Copiado com sucesso!",
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    backgroundColor: "#42ba96",
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    onClick: function () {}, // Callback after click
+  }).showToast();
+};

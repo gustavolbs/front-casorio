@@ -32,10 +32,7 @@
       <div class="column">
         <div class="methods">
           <h1>De que forma gostaria de nos presentear?</h1>
-          <span>
-            Aceitamos Pix, TED, Crédito, 2 cartões, PayPal, Débito Virtual
-            Caixa, Saldo MercadoPago, Lotérica e Boleto.
-          </span>
+          <span> Aceitamos Pix, TED, Boleto, Crédito, 2 cartões e mais. </span>
           <span>
             Você pode alterar a forma de pagamento a qualquer momento.
           </span>
@@ -105,17 +102,10 @@
           <h2>Finalize seu presente através das informações abaixo</h2>
 
           <div>
-            <div class="pix-img-div">
-              <img id="pix-img" src={data:image/jpeg;base64,${qr_code_base64}
-              alt="Pix" />
-              <div class="pix-img-div-loader">
-                <img src="./assets/loader.svg" alt="loader" class="loader" />
-              </div>
-            </div>
+            <h2>Chave pix</h2>
 
-            <h4>Utilize o QR Code acima ou copie o código com o botão</h4>
-            <button class="pix-button" id="copy-pix-hash">
-              Pix Copia e Cola
+            <button class="pix-button" onclick="copyText('102.316.314-48')">
+              Copiar chave Pix <br />CPF: 102.316.314-48
             </button>
           </div>
         </div>
@@ -129,11 +119,11 @@
             <span class="tedLabel">TED</span>
             <div>
               <h4>Banco</h4>
-              <span>323 Mercado Pago</span>
+              <span>341 Itaú</span>
             </div>
             <div>
               <h4>Agência e Conta</h4>
-              <span>ag: 0001 cc: 7892562315-6</span>
+              <span>ag: 0500 cc: 020762821-0</span>
             </div>
             <div>
               <h4>Beneficiário</h4>
@@ -176,18 +166,6 @@
 
       <div class="column">
         <div class="thanks">
-          <div class="pix-key fade">
-            <h2>Para valores avulsos, utilize a chave pix abaixo</h2>
-
-            <h5>e84b74ce-29e8-408f-96f4-4efe18bc1927</h5>
-            <button
-              class="pix-button"
-              onclick="copyText('e84b74ce-29e8-408f-96f4-4efe18bc1927')"
-            >
-              Copiar chave Pix
-            </button>
-          </div>
-
           <div class="thanks-img-div fade">
             <h2>Obrigado! 😁❤️</h2>
             <img src="./assets/thanks.svg" alt="Obrigado!" />
