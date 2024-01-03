@@ -15,7 +15,7 @@ const ALL_GIFTS = [
     price: 300.0,
     img: "../assets/gifts/cooktop.png",
     id: 2,
-    stock: true,
+    stock: false,
   },
   {
     product: "Parcela da geladeira",
@@ -36,7 +36,7 @@ const ALL_GIFTS = [
     price: 200.0,
     img: "../assets/gifts/academia.jpg",
     id: 5,
-    stock: true,
+    stock: false,
   },
   {
     product: "Metade da parcela dos móveis da cozinha",
@@ -78,7 +78,7 @@ const ALL_GIFTS = [
     price: 400.0,
     img: "../assets/gifts/guarda-roupa.jpg",
     id: 11,
-    stock: true,
+    stock: false,
   },
   {
     product: "Parcela móvel do banheiro",
@@ -92,14 +92,14 @@ const ALL_GIFTS = [
     price: 150.0,
     img: "../assets/gifts/forninho.jpg",
     id: 13,
-    stock: true,
+    stock: false,
   },
   {
     product: "Parcela do robô aspirador (pra perseguir Bolt)",
     price: 200.0,
     img: "../assets/gifts/robo-aspirador.jpg",
     id: 14,
-    stock: true,
+    stock: false,
   },
   {
     product: "Jogo de cama",
@@ -120,7 +120,7 @@ const ALL_GIFTS = [
     price: 90.0,
     img: "../assets/gifts/cavalo.jpg",
     id: 17,
-    stock: true,
+    stock: false,
   },
   {
     product: "Escolinha pra Bolt não ir pra o mundo do crime",
